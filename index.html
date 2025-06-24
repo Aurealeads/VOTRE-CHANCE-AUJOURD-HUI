@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>VOTRE CHANCE AUJOURD'HUI</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f9f9f9;
+            color: #333;
+        }
+        .container {
+            text-align: center;
+            padding: 50px;
+            background-color: #ffffff;
+            margin: 20px auto;
+            max-width: 800px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            border-radius: 8px;
+        }
+        h1 {
+            color: #ff6600;
+        }
+        h2 {
+            color: #333;
+        }
+        form {
+            margin-top: 30px;
+        }
+        label {
+            display: block;
+            text-align: left;
+            margin: 10px 0 5px;
+            font-size: 16px;
+        }
+        input, select {
+            width: calc(100% - 20px);
+            padding: 10px;
+            margin: 5px 0 15px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+            font-size: 16px;
+        }
+        button {
+            background-color: #ff6600;
+            color: #ffffff;
+            padding: 15px 20px;
+            border: none;
+            border-radius: 4px;
+            font-size: 18px;
+            cursor: pointer;
+        }
+        button:hover {
+            background-color: #e65c00;
+        }
+    </style>
+</head>
+<body>
+<nav style="background-color: #333; padding: 10px; text-align: center;">
+    <a href="index.html" style="color: white; text-decoration: none; margin: 0 15px;">Accueil</a>
+    <a href="seconda_pagina.html" style="color: white; text-decoration: none; margin: 0 15px;">Politique de Confidentialité</a>
+</nav>
+
+<div class="container">
+    <h1>VOTRE CHANCE AUJOURD'HUI</h1>
+    <h2>TENTEZ DE GAGNER DES BONS EXCLUSIFS DES MEILLEURS SUPERMARCHÉS</h2>
+
+    <form onsubmit="redirectToSuccess(event)">
+        <label for="nome">Prénom</label>
+        <input type="text" id="nome" name="nome" placeholder="Entrez votre prénom" required>
+
+        <label for="cognome">Nom</label>
+        <input type="text" id="cognome" name="cognome" placeholder="Entrez votre nom" required>
+
+        <label for="email">Email</label>
+        <input type="email" id="email" name="email" placeholder="Entrez votre email" required>
+
+        <label for="sesso">Sexe</label>
+        <select id="sesso" name="sesso" required>
+            <option value="">Sélectionnez</option>
+            <option value="homme">Homme</option>
+            <option value="femme">Femme</option>
+            <option value="autre">Autre</option>
+        </select>
+
+        <label for="data_nascita">Date de naissance</label>
+        <input type="date" id="data_nascita" name="data_nascita">
+
+        <label>
+            <input type="checkbox" name="iscrizione_newsletter" value="oui">
+            Après avoir pris connaissance de la <a href="https://www.latuafortunaoggi.it/seconda_pagina.html" target="_blank">Politique de Confidentialité</a>, j'accepte de m'abonner à la newsletter du site VotreChanceAujourdHui et de recevoir les meilleures offres de la semaine.
+        </label>
+
+        <label>
+            <input type="checkbox" name="promozioni_LaTuaFortunaOggi" value="oui">
+            Je déclare avoir lu la 
+            <a href="https://www.latuafortunaoggi.it/seconda_pagina.html" target="_blank">Politique de Confidentialité</a> 
+            et j’accepte de recevoir de VotreChanceAujourdHui des communications promotionnelles concernant des produits et services de tiers sélectionnés.
+        </label>
+
+        <label>
+            <input type="checkbox" name="dati_a_terzi" value="oui">
+            J'accepte que mes données personnelles soient partagées avec des tiers qui pourront m'envoyer des offres promotionnelles par email.
+        </label>
+
+        <button type="submit">Inscrivez-vous maintenant</button>
+    </form>
+</div>
+
+<script>
+    function redirectToSuccess(event) {
+        event.preventDefault();
+        window.location.href = "success.html";
+    }
+</script>
+</body>
+</html>
